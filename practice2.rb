@@ -11,8 +11,20 @@ numString = ''
   onesPlace = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine']
   tensPlace = ['ten', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety']
   teenagers = ['eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen']
+ 
   
   left = number
+  write = left / 1000000
+  left = left - write*1000000
+  
+  if write > 0
+    millions = englishNumber write
+    numString = numString + millions + ' million'
+    if left > 0
+      numString = numString + ' '
+    end
+  end
+  
   write = left / 1000
   left = left - write*1000
   
@@ -64,4 +76,4 @@ end
 puts englishNumber( 2000)
 puts englishNumber(43000)
 puts englishNumber( 9999)
-puts englishNumber(99999)
+puts englishNumber(1889999)
