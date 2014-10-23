@@ -13,6 +13,18 @@ numString = ''
   teenagers = ['eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen']
   
   left = number
+  write = left / 1000
+  left = left - write*1000
+  
+  if write > 0
+    thousands = englishNumber write
+    numString = numString + thousands + ' thousand'
+    if left > 0
+      numString = numString + ' '
+    end
+  end
+  
+  left = number
   write = left / 100
   left = left - write*100
   
