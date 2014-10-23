@@ -24,7 +24,6 @@ numString = ''
     end
   end
   
-  left = number
   write = left / 100
   left = left - write*100
   
@@ -62,7 +61,7 @@ numString
 end
 
     
-puts englishNumber( 1000)
-puts englishNumber(10000)
+puts englishNumber( 2000)
+puts englishNumber(43000)
 puts englishNumber( 9999)
 puts englishNumber(99999)
